@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonás Chávez Bolaños | Portafolio</title>
+    <link rel="icon" href="img/Logo_Tech.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.14/dist/dotlottie-wc.js" type="module"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-container">
+                <div class="profile-photo-wrapper">
+                    <div class="profile-photo">
+                        <img src="img/Perfil_foto.jpeg" alt="Jonás Chávez Bolaños">
+                    </div>
+                </div>
+                <div class="profile-info">
+                    <h1>Jonás Chávez Bolaños</h1>
+                    <p class="tagline">Estudiante de Ingeniería de Sistemas &amp; Desarrollador Web</p>
+                    <p class="location">
+                        <i class="fas fa-map-marker-alt"></i> Lima, Perú
+                    </p>
+                    <div class="action-links">
+                        <a href="https://github.com/Jonas26-hash" target="_blank" rel="noopener noreferrer" class="btn-outline" title="GitHub">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/jon%C3%A1s-ch%C3%A1vez-10b69a369/" target="_blank" rel="noopener noreferrer" class="btn-outline" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="#" class="btn-outline" title="Email" onclick="openEmailModal()">
+                            <i class="fas fa-envelope"></i> Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav class="main-nav" id="main-nav">
+            <div class="nav-links">
+                <a href="#sobre-mi" class="nav-link"><span class="nav-number">01.</span> Sobre mí</a>
+                <a href="#tecnologias" class="nav-link"><span class="nav-number">02.</span> Tecnologías</a>
+                <a href="#proyectos" class="nav-link"><span class="nav-number">03.</span> Proyectos</a>
+                <a href="#formacion" class="nav-link"><span class="nav-number">04.</span> Formación</a>
+                <a href="#formacion-complementaria" class="nav-link"><span class="nav-number">05.</span> Formación Complementaria</a>
+            </div>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </button>
+        </nav>
+
+        <section id="sobre-mi" class="section">
+            <h2 class="section-title"><span class="section-number">01.</span> Sobre mí</h2>
+            <div class="content-box">
+                <p>
+                    Estudiante de Ingeniería de Sistemas próximo a cursar el 6.º ciclo, con interés en el desarrollo de software 
+                    y experiencia en proyectos académicos y personales utilizando <strong>Java, Spring Boot, Angular, HTML, CSS, 
+                    JavaScript y bases de datos relacionales</strong> como Oracle y PostgreSQL.
+                </p>
+                <p>
+                    He participado en el desarrollo de aplicaciones web full stack, implementando APIs REST, arquitecturas por capas 
+                    y soluciones orientadas a la gestión de información. Entre mis proyectos destacan un <strong>Sistema de Monitoreo 
+                    de Pacientes</strong> y una plataforma basada en <strong>arquitectura de microservicios</strong>, donde reforcé 
+                    conocimientos en desarrollo backend, frontend, integración de servicios y diseño de bases de datos.
+                </p>
+                <p>
+                    Me considero una persona responsable, autodidacta y con gran interés por el aprendizaje continuo, 
+                    comprometido con el desarrollo de soluciones tecnológicas que generen impacto real.
+                </p>
+            </div>
+        </section>
+
+        <section id="tecnologias" class="section">
+            <h2 class="section-title"><span class="section-number">02.</span> Tecnologías</h2>
+            <div class="content-box">
+                <div class="tech-category">
+                    <h3 class="category-title">Frontend</h3>
+                    <div class="tech-grid">
+                        <div class="tech-card" data-tooltip="Angular">
+                            <img src="img/Angular.png" alt="Angular">
+                            <span>Angular</span>
+                        </div>
+                        <div class="tech-card" data-tooltip="React">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                            <span>React</span>
+                        </div>
+                        <div class="tech-card" data-tooltip="TypeScript">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
+                            <span>TypeScript</span>
+                        </div>
+                        <div class="tech-card" data-tooltip="JavaScript">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="tech-card" data-tooltip="HTML5">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                            <span>HTML5</span>
+                        </div>
+                        <div class="tech-card" data-tooltip="CSS3">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                            <span>CSS3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3 class="category-title">Backend</h3>
+                    <div class="tech-grid">
+                        <div class="tech-card" data-tooltip="Java">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                            <span>Java</span>
+                        </div>
+                        <div class="tech-card" data-tooltip="Spring Boot">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot">
+                            <span>Spring Boot</span>
+                        </div>
+                        <div class="tech-card" data-tooltip="Quarkus">
+                            <img src="https://design.jboss.org/quarkus/logo/final/SVG/quarkus_icon_rgb_default.svg" alt="Quarkus">
+                            <span>Quarkus</span>
+                        </div>
+                        <div class="tech-card" data-tooltip="Node.js">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                            <span>Node.js</span>
+                        </div>
+                        <div class="tech-card" data-tooltip="Python">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-card" data-tooltip="APIs REST">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="REST API">
+                            <span>APIs REST</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3 class="category-title">Bases de Datos</h3>
+                    <div class="tech-grid">
+                        <div class="tech-card" data-tooltip="Oracle">
+                            <img src="img/oracle.png" alt="Oracle">
+                            <span>Oracle</span>
+                        </div>
+                        <div class="tech-card" data-tooltip="PostgreSQL">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="tech-card" data-tooltip="SQL Server">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server">
+                            <span>SQL Server</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3 class="category-title">Herramientas &amp; DevOps</h3>
+                    <div class="tech-grid">
+                        <div class="tech-card" data-tooltip="Git">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                            <span>Git</span>
+                        </div>
+                        <div class="tech-card" data-tooltip="GitHub">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+                            <span>GitHub</span>
+                        </div>
+                        <div class="tech-card" data-tooltip="Docker">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+                            <span>Docker</span>
+                        </div>
+                        <div class="tech-card" data-tooltip="Figma">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+                            <span>Figma</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="section">
+            <h2 class="section-title"><span class="section-number">03.</span> Proyectos</h2>
+            <div class="content-box">
+                <div class="projects-grid">
+
+                    <div class="project-card featured">
+                        <div class="project-header">
+                            <h3>Sistema de Monitoreo de Pacientes</h3>
+                            <span class="project-status">Académico</span>
+                        </div>
+                        <p class="project-description">
+                            Aplicación web full stack para el monitoreo de signos vitales y gestión de historiales clínicos. 
+                            Implementa APIs REST, autenticación segura y dashboard interactivo para visualización de datos.
+                        </p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>TypeScript</span>
+                            <span>Quarkus</span>
+                            <span>PostgreSQL</span>
+                            <span>Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Jonas26-hash/Sistema-de-monitoreo-de-pacientes.git" target="_blank" class="icon-link" title="Ver código">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>AcademyHub - Microservicios</h3>
+                            <span class="project-status">Académico</span>
+                        </div>
+                        <p class="project-description">
+                            Plataforma educativa basada en arquitectura de microservicios con Spring Boot (solo backend). 
+                            Implementa servicios independientes para autenticación, usuarios, cursos y reportes, 
+                            con comunicación vía API REST, contenedores Docker y Spring Cloud Gateway.
+                        </p>
+                        <div class="project-tech">
+                            <span>Java 21</span>
+                            <span>Spring Boot 3</span>
+                            <span>Spring Cloud</span>
+                            <span>PostgreSQL</span>
+                            <span>Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Jonas26-hash/academyhub-microservices.git" target="_blank" class="icon-link" aria-label="Ver código en GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://techtonicdev.mintlify.app/" target="_blank" class="icon-link" aria-label="Ver documentación">
+                                <i class="fas fa-book"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>NexusStore</h3>
+                            <span class="project-status">Académico</span>
+                        </div>
+                        <p class="project-description">
+                            Aplicación web de gestión comercial para control de inventario y ventas. 
+                            Construida con Angular y Spring Boot, desplegada con Docker y nginx.
+                        </p>
+                        <div class="project-tech">
+                            <span>Angular</span>
+                            <span>TypeScript</span>
+                            <span>Java 17</span>
+                            <span>Spring Boot</span>
+                            <span>Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Jonas26-hash/NexusStore.git" target="_blank" class="icon-link" aria-label="Ver código en GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="formacion" class="section">
+            <h2 class="section-title"><span class="section-number">04.</span> Formación</h2>
+            <div class="content-box">
+                <div class="education-item">
+                    <div class="edu-row">
+                        <img src="img/UPeU.png" alt="Logo UPeU" class="edu-logo">
+                        <div>
+                            <h3>Universidad Peruana Unión</h3>
+                            <p class="edu-meta">Ingeniería de Sistemas (5.° ciclo) | Lima, Perú</p>
+                            <p class="edu-desc">Facultad de Ingeniería y Arquitectura · Marzo 2024 - Actualidad</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="formacion-complementaria" class="section">
+            <h2 class="section-title"><span class="section-number">05.</span> Formación Complementaria</h2>
+            <div class="content-box">
+                <div class="futuristic-tabs">
+                    <button class="tab-button active" onclick="openTab('certificados', this)">
+                        <i class="fas fa-certificate"></i> Certificados
+                    </button>
+                    <button class="tab-button" onclick="openTab('constancias', this)">
+                        <i class="far fa-file-alt"></i> Constancias
+                    </button>
+                </div>
+
+                <div id="certificados" class="tab-content">
+                    <div class="course-card">
+                        <div class="course-header">
+                            <i class="fas fa-award"></i>
+                            <h3>Datos con Python</h3>
+                            <span class="course-badge">12 horas</span>
+                        </div>
+                        <p class="course-meta">Semana de la Carrera Tech | Noviembre 2024</p>
+                        <a href="certificates/datos-con-python.pdf" target="_blank" class="btn-small">Ver certificado <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-header">
+                            <i class="fas fa-award"></i>
+                            <h3>Perú Hub Digital Universitario: Lidera el cambio</h3>
+                            <span class="course-badge">10 horas</span>
+                        </div>
+                        <p class="course-meta">Certificado de Asistencia | Mayo 2026</p>
+                        <a href="certificates/peru-hub-digital.png" target="_blank" class="btn-small">Ver certificado <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-header">
+                            <i class="fas fa-award"></i>
+                            <h3>Fortalecimiento en Investigación Científica para Ingeniería</h3>
+                            <span class="course-badge">25 horas</span>
+                        </div>
+                        <p class="course-meta">UPeU - Sociedad Científica de Ingeniería de Sistemas | Mayo 2024</p>
+                        <a href="certificates/investigacion-cientifica.pdf" target="_blank" class="btn-small">Ver certificado <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div id="constancias" class="tab-content">
+                    <div class="course-card">
+                        <div class="course-header">
+                            <i class="far fa-file-alt"></i>
+                            <h3>Programación en Java</h3>
+                            <span class="course-badge">12 horas</span>
+                        </div>
+                        <p class="course-meta">Programa de Alfabetización Digital - RPCC | Agosto 2025</p>
+                        <a href="certificates/java-programacion.pdf" target="_blank" class="btn-small">Ver constancia <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-header">
+                            <i class="far fa-file-alt"></i>
+                            <h3>Oracle Fundamentals</h3>
+                            <span class="course-badge">12 horas</span>
+                        </div>
+                        <p class="course-meta">Programa de Alfabetización Digital - RPCC | Junio 2025</p>
+                        <a href="certificates/oracle-fundamentals.pdf" target="_blank" class="btn-small">Ver constancia <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-header">
+                            <i class="far fa-file-alt"></i>
+                            <h3>Adobe Illustrator</h3>
+                            <span class="course-badge">8 horas</span>
+                        </div>
+                        <p class="course-meta">Programa de Alfabetización Digital - RPCC | Mayo 2025</p>
+                        <a href="certificates/illustrator.pdf" target="_blank" class="btn-small">Ver constancia <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-header">
+                            <i class="far fa-file-alt"></i>
+                            <h3>Adobe Photoshop</h3>
+                            <span class="course-badge">8 horas</span>
+                        </div>
+                        <p class="course-meta">Programa de Alfabetización Digital - RPCC | Mayo 2025</p>
+                        <a href="certificates/photoshop.pdf" target="_blank" class="btn-small">Ver constancia <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-header">
+                            <i class="far fa-file-alt"></i>
+                            <h3>Python Fundamentals</h3>
+                            <span class="course-badge">12 horas</span>
+                        </div>
+                        <p class="course-meta">Programa de Alfabetización Digital - RPCC | Noviembre 2024</p>
+                        <a href="certificates/python-fundamentals.pdf" target="_blank" class="btn-small">Ver constancia <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2026 Jonás Chávez Bolaños. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="mailto:chavezjonas347@gmail.com">chavezjonas347@gmail.com</a>
+                <a href="https://github.com/Jonas26-hash" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/jon%C3%A1s-ch%C3%A1vez-10b69a369/" target="_blank">LinkedIn</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal overlay -->
+    <div id="modal-overlay"></div>
+
+    <!-- Email modal -->
+    <div id="email-modal">
+        <div class="modal-content">
+            <button id="modal-close" class="modal-close">&times;</button>
+
+            <!-- Form view -->
+            <div id="modal-form-view">
+                <h3>Envíame un mensaje</h3>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" name="name" id="name" required placeholder="Tu nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Tu correo</label>
+                        <input type="email" name="email" id="email" required placeholder="tu@correo.com">
+                        <span class="field-hint">Verifica que tu correo esté bien escrito para recibir mi respuesta.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea name="message" id="message" rows="4" required placeholder="Escribe tu mensaje..."></textarea>
+                    </div>
+                    <input type="hidden" name="tiempo" id="tiempo">
+                    <button type="submit" class="btn-send">Enviar mensaje <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+
+            <!-- Result view -->
+            <div id="modal-result-view" style="display: none;">
+                <div id="result-success" style="display: none; text-align: center;">
+                    <div class="lottie-container">
+                        <dotlottie-wc src="https://lottie.host/70633c6a-cfe4-4115-b9d4-48291a757be9/naWlgV1r6p.lottie" autoplay loop></dotlottie-wc>
+                    </div>
+                    <p class="result-message">¡Mensaje enviado correctamente!</p>
+                    <p class="result-sub">Gracias por contactarme, te responderé pronto.</p>
+                </div>
+                <div id="result-error" style="display: none; text-align: center;">
+                    <div class="lottie-container">
+                        <dotlottie-wc src="https://lottie.host/80cf361b-2528-477a-a6bf-795f5d4f1e32/TlzeE4uglJ.lottie" autoplay loop></dotlottie-wc>
+                    </div>
+                    <p class="result-message" id="error-message">Ocurrió un error al enviar el mensaje.</p>
+                    <p class="result-sub">Verifica tus datos e inténtalo nuevamente.</p>
+                    <button class="btn-send" onclick="backToForm()">Reintentar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp floating button -->
+    <a href="https://wa.me/51930563938?text=Hola%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20contactarte%20contigo." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        emailjs.init('lpBwrBCB-SyySlEJu');
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const nav = document.getElementById('main-nav');
+            const navToggle = document.getElementById('nav-toggle');
+            function handleNav() {
+                if (window.innerWidth > 900) {
+                    nav.classList.add('sticky-nav');
+                    navToggle.style.display = 'none';
+                } else {
+                    nav.classList.remove('sticky-nav');
+                    if (window.scrollY > 120) {
+                        navToggle.style.display = 'block';
+                    } else {
+                        navToggle.style.display = 'none';
+                        nav.classList.remove('nav-open');
+                        navToggle.classList.remove('open');
+                    }
+                }
+            }
+
+            handleNav();
+            window.addEventListener('resize', handleNav);
+            window.addEventListener('scroll', handleNav);
+
+            navToggle.addEventListener('click', function() {
+                nav.classList.toggle('nav-open');
+                navToggle.classList.toggle('open');
+            });
+
+            nav.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 900) {
+                        nav.classList.remove('nav-open');
+                        navToggle.classList.remove('open');
+                    }
+                });
+            });
+
+            // Email modal
+            const modal = document.getElementById('email-modal');
+            const overlay = document.getElementById('modal-overlay');
+            const closeBtn = document.getElementById('modal-close');
+            const modalFormView = document.getElementById('modal-form-view');
+            const modalResultView = document.getElementById('modal-result-view');
+            const resultSuccess = document.getElementById('result-success');
+            const resultError = document.getElementById('result-error');
+            const errorMessage = document.getElementById('error-message');
+            const contactForm = document.getElementById('contact-form');
+
+            function resetModalViews() {
+                modalFormView.style.display = 'block';
+                modalResultView.style.display = 'none';
+                resultSuccess.style.display = 'none';
+                resultError.style.display = 'none';
+                const btn = contactForm.querySelector('.btn-send');
+                btn.innerHTML = 'Enviar mensaje <i class="fas fa-paper-plane"></i>';
+                btn.disabled = false;
+                contactForm.reset();
+            }
+
+            window.openEmailModal = function() {
+                resetModalViews();
+                modal.classList.add('open');
+                overlay.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            };
+
+            function closeEmailModal() {
+                modal.classList.remove('open');
+                overlay.classList.remove('open');
+                document.body.style.overflow = '';
+                resetModalViews();
+            }
+
+            window.backToForm = function() {
+                resetModalViews();
+            };
+
+            closeBtn.addEventListener('click', closeEmailModal);
+            overlay.addEventListener('click', closeEmailModal);
+
+            // Email send
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                document.getElementById('tiempo').value = new Date().toLocaleString();
+                const btn = this.querySelector('.btn-send');
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+                btn.disabled = true;
+
+                emailjs.sendForm('service_fa2ubn9', 'template_7146wsq', this)
+                    .then(() => {
+                        modalFormView.style.display = 'none';
+                        modalResultView.style.display = 'block';
+                        resultSuccess.style.display = 'flex';
+                        resultError.style.display = 'none';
+                        setTimeout(closeEmailModal, 3500);
+                    })
+                    .catch((err) => {
+                        modalFormView.style.display = 'none';
+                        modalResultView.style.display = 'block';
+                        resultError.style.display = 'flex';
+                        resultSuccess.style.display = 'none';
+                        errorMessage.textContent = (err && err.text)
+                            ? err.text
+                            : 'Error al enviar el mensaje. Verifica tu correo e inténtalo de nuevo.';
+                    });
+            });
+
+            // Theme toggle
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            themeIcon.className = savedTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+
+            themeToggle.addEventListener('click', function() {
+                const current = document.documentElement.getAttribute('data-theme');
+                const next = current === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', next);
+                localStorage.setItem('theme', next);
+                themeIcon.className = next === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+            });
+        });
+
+        function openTab(tabName, btn) {
+            document.querySelectorAll('.tab-content').forEach(t => t.style.display = 'none');
+            document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+            document.getElementById(tabName).style.display = 'block';
+            btn.classList.add('active');
+        }
+    </script>
+</body>
+</html>
